@@ -1,0 +1,396 @@
+{
+  "format": "tr1pp-development-checkpoint",
+  "product": "TR1PP Mashup Studio 2.0 continuing development",
+  "baseline_archive_sha256": "551b46aeba6b90c01d08479cfec64747b0c99f811be1c8b924b4300e72e71e83",
+  "final_tests": {
+    "passed": 61,
+    "failed": 0,
+    "skipped": 0,
+    "actual_model_tests_executed": 2
+  },
+  "fresh_virtual_environment_tests_passed": 59,
+  "windows_execution": "not tested",
+  "online_acquisition": "blocked by proxy HTTP 403",
+  "model": {
+    "package": "basic-pitch==0.4.0",
+    "backend": "ONNX",
+    "sha256": "2c3c1d144bfa61ad236e92e169c13535c880469a12a047d4e73451f2c059a0ec"
+  },
+  "files": {
+    ".github/workflows/windows.yml": {
+      "sha256": "30b1c7b78617056b811f2186d01bbf7493dc1fe7ca14028c1a3a05b7c53e7fb8",
+      "bytes": 1630,
+      "mode": "0o600"
+    },
+    ".gitignore": {
+      "sha256": "0c56c7a5044f2a8e28563478f4abc2bdc4144409f805036267385c12310a7d27",
+      "bytes": 98,
+      "mode": "0o600"
+    },
+    "CHANGELOG.md": {
+      "sha256": "ee5d8e424d99f3733073fcdd2c57a12be16892d18c6f8552088a269e278c396c",
+      "bytes": 1682,
+      "mode": "0o600"
+    },
+    "DEVELOPMENT_CHECKPOINT.md": {
+      "sha256": "0c17eb136a918b36f7c2c3c2c3ef3ac7c9c12081e18a1a2e6b3576eb6392de71",
+      "bytes": 4826,
+      "mode": "0o600"
+    },
+    "KNOWN_ISSUES.md": {
+      "sha256": "c0aac88eb2377de7be27ecfd47092f7ccf9fc5d369d93fbd35a9870402a48c23",
+      "bytes": 4754,
+      "mode": "0o600"
+    },
+    "README.md": {
+      "sha256": "41c052351edb816e32197fa641f34f2726e22a0e2c49d8a72256d100b9c89130",
+      "bytes": 6528,
+      "mode": "0o600"
+    },
+    "TEST_RESULTS.txt": {
+      "sha256": "656ecccffdf2ddcdcfe6036b769594f9ca9635fe4602c891d6d4bed4c71797fc",
+      "bytes": 3859,
+      "mode": "0o600"
+    },
+    "VERIFICATION_REPORT.md": {
+      "sha256": "d4572b4e0d3ef382e35f207eec37e933f028064369dba807c0c4a6cb9dc2287d",
+      "bytes": 7724,
+      "mode": "0o600"
+    },
+    "build_exe.bat": {
+      "sha256": "6f0870f65ed9ff68ccdab49fc479779ddfb69a04441c32e35873343cdbd5c5c2",
+      "bytes": 538,
+      "mode": "0o600"
+    },
+    "docs/ARCHITECTURE.md": {
+      "sha256": "3448e438f57f1a065e0ab88cc9d35836538125e494e021ec93c98d57af92ebae",
+      "bytes": 2200,
+      "mode": "0o600"
+    },
+    "docs/benchmark.json": {
+      "sha256": "c77350c3bbc016d69c0ed9965e7965ac053695eb34bef51ca122036916be1107",
+      "bytes": 362,
+      "mode": "0o600"
+    },
+    "docs/history/KNOWN_ISSUES-v1.1.md": {
+      "sha256": "0861aa07a7ef969c160c158ed85a445ed7eb6224223cc152c695156d3da38487",
+      "bytes": 1777,
+      "mode": "0o600"
+    },
+    "docs/history/README-v1.1.md": {
+      "sha256": "d7ef8f16744bcf584de561f5d0011f26d05833601f15ecebda90dd0d6912f200",
+      "bytes": 2123,
+      "mode": "0o600"
+    },
+    "docs/history/TEST_RESULTS-v1.1.txt": {
+      "sha256": "3a2fbea65f9d140d8f8755c49a52bb2b7ef5b267e3f64eaeb2158d9f8e8dbf4d",
+      "bytes": 123,
+      "mode": "0o600"
+    },
+    "docs/history/VERIFICATION_REPORT-v1.1.md": {
+      "sha256": "5b3489ee30ff25c71923c8c2a40424b4008dd4d5fc23329d7971d08c63dbcfa9",
+      "bytes": 6204,
+      "mode": "0o600"
+    },
+    "docs/runtime-capabilities.json": {
+      "sha256": "12bf41d24a4b56985283175a007f5185ac502db8e94e519977a73b83601c2c8f",
+      "bytes": 982,
+      "mode": "0o600"
+    },
+    "docs/studio-checkpoint.png": {
+      "sha256": "cd1a2575ae4483f7f635091ff2b660c1f80b1bcc5750c01f552a0e310caffe0b",
+      "bytes": 136413,
+      "mode": "0o600"
+    },
+    "examples/generated_complex_mashup.mid": {
+      "sha256": "cabda44b630b2e117fc58122c7e779b09ce69d20c6d4c6b2ae68aa08e500eb3d",
+      "bytes": 39973,
+      "mode": "0o600"
+    },
+    "examples/generated_complex_mashup_report.json": {
+      "sha256": "6358e9135a83045658fe72de8cbb963e8e173845aef1731b8037e5497a8cb8d1",
+      "bytes": 3864,
+      "mode": "0o600"
+    },
+    "install_transcription.bat": {
+      "sha256": "b1afbbe7c5507815dfba9c6d622588ded12aa9bc46de8e241a4434e6c4637b30",
+      "bytes": 192,
+      "mode": "0o600"
+    },
+    "launch.bat": {
+      "sha256": "249eb932d8ff98fbcebd7caa139c5ee645073b67f718f68670f0f4a9a3529888",
+      "bytes": 160,
+      "mode": "0o600"
+    },
+    "main.py": {
+      "sha256": "13fb7bffe9ef597bc511c143fabf54b1308a7f558f36adfc95443e6c7032f1a6",
+      "bytes": 56,
+      "mode": "0o600"
+    },
+    "pyproject.toml": {
+      "sha256": "70a2568bc193253e68e5dd06c2798a1def89b57c7325dcc89c165fd127d3ce47",
+      "bytes": 570,
+      "mode": "0o600"
+    },
+    "requirements-cloud.lock": {
+      "sha256": "2df8699cc25987fa904b1658d131a846e7722fd6f7c4744688e93370eb585ed2",
+      "bytes": 1297,
+      "mode": "0o600"
+    },
+    "requirements-transcription.txt": {
+      "sha256": "cf499e30b45da430bfb322b88b057865c084e97db0aa55331c557a89733246c5",
+      "bytes": 581,
+      "mode": "0o600"
+    },
+    "requirements.txt": {
+      "sha256": "b70e182a33e48f823eea5802e6a71324be5cb90cdc1c2562bebaac24925536be",
+      "bytes": 311,
+      "mode": "0o600"
+    },
+    "setup.bat": {
+      "sha256": "1532b93f85bbe484eb331d3704008249feeebd79d5565e1d8ba79238cce46db9",
+      "bytes": 647,
+      "mode": "0o600"
+    },
+    "tests/__init__.py": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "mode": "0o600"
+    },
+    "tests/create_test_midis.py": {
+      "sha256": "1711587a9ed88f05d39521fee53958a221f9c5c6693f98441f50055e5e155e10",
+      "bytes": 762,
+      "mode": "0o600"
+    },
+    "tests/fixtures/Demo Arrangement.mid": {
+      "sha256": "44dfb7b3964cb5762c5c2565396a545659a7283bb83793dc3e100749513957de",
+      "bytes": 1989,
+      "mode": "0o600"
+    },
+    "tests/fixtures/Demo Quality Report.json": {
+      "sha256": "4252ff27515397218647288f9840a6841a2d5ac56bc08cc06135019c517917aa",
+      "bytes": 2498,
+      "mode": "0o600"
+    },
+    "tests/fixtures/Demo Source 1.mid": {
+      "sha256": "b75ed9e89e87f45b5ae9074624f2504fdd7cae8e584ded484a794cc13e24c0f4",
+      "bytes": 719,
+      "mode": "0o600"
+    },
+    "tests/fixtures/Demo Source 2.mid": {
+      "sha256": "1b960150fcedebd6b4392145cad130755186c0bd4e0142fc2bc63aa7ca1cb32c",
+      "bytes": 719,
+      "mode": "0o600"
+    },
+    "tests/fixtures/complex_generated_a.mid": {
+      "sha256": "77e528aefb393aa9f7b5fd683c5e3408f22d154217f375e0be92da848c7c1a92",
+      "bytes": 26392,
+      "mode": "0o600"
+    },
+    "tests/fixtures/complex_generated_b.mid": {
+      "sha256": "88939b4b703e76e0127e25ec23a5a51f32e1fae48eba80f7f8db0f09cbcd98ea",
+      "bytes": 23304,
+      "mode": "0o600"
+    },
+    "tests/fixtures/v0.2 Demo Arrangement.mid": {
+      "sha256": "e646afaac6703504a9c08dbf7a4a802b7bfb8ba3655fa3c4faef0ea5c6251be0",
+      "bytes": 1981,
+      "mode": "0o600"
+    },
+    "tests/fixtures/v0.2 Demo Quality Report.json": {
+      "sha256": "198ac67c71c583c6b01c45570b7890001d11917e35b177e502a010db5d390e55",
+      "bytes": 3532,
+      "mode": "0o600"
+    },
+    "tests/test_audio_mix.py": {
+      "sha256": "ef734c43bfce792f00b643fab770847f1223a5b3121b0b4fd7a5898db3a815ad",
+      "bytes": 2500,
+      "mode": "0o600"
+    },
+    "tests/test_capabilities.py": {
+      "sha256": "c67fc6e35b492ddde056aa9cfa3c2a4bbbad3a5e20b913107087b547aa503200",
+      "bytes": 1126,
+      "mode": "0o600"
+    },
+    "tests/test_editor_extended.py": {
+      "sha256": "7ddc1abbca0bfeef9ad441668918b5c2d4557def2e952a779df8fbf38d57cc98",
+      "bytes": 3149,
+      "mode": "0o600"
+    },
+    "tests/test_end_to_end.py": {
+      "sha256": "384174dd84bcec10f883907b45477d3235ce87e0bbd1c1d82df775f0510331ba",
+      "bytes": 2474,
+      "mode": "0o600"
+    },
+    "tests/test_engine.py": {
+      "sha256": "0466491410196137817d9f3bbbb69aae49cfa20aede692c90293d3dac6d9274e",
+      "bytes": 1129,
+      "mode": "0o600"
+    },
+    "tests/test_gui_interaction.py": {
+      "sha256": "afd30fad9ea911ce9f31882e8f28f7bcb2cf153dd292fcd3afb5eec1a9994f9d",
+      "bytes": 6072,
+      "mode": "0o600"
+    },
+    "tests/test_import_recovery.py": {
+      "sha256": "9f3cf386107135e9ad6b98c4c687699107f9d54a9aa4b68108180b79cd3c2213",
+      "bytes": 1748,
+      "mode": "0o600"
+    },
+    "tests/test_media_decode.py": {
+      "sha256": "e0479c208068c40d7e963ff12c0b4a8338e4e9417aa0276b5332f96b9baeba6c",
+      "bytes": 1559,
+      "mode": "0o600"
+    },
+    "tests/test_notation_and_soundfont.py": {
+      "sha256": "ac541d81ab5487123a0ce43f9c0148c8cb1b367938fad7147ad3cfef0222e2ed",
+      "bytes": 1355,
+      "mode": "0o600"
+    },
+    "tests/test_planning.py": {
+      "sha256": "c53e38035b0796a8ea50079a7313c044c17cf8da96d72161f58cd9218d5cfa56",
+      "bytes": 3975,
+      "mode": "0o600"
+    },
+    "tests/test_project.py": {
+      "sha256": "2bccd60d5370bd9aa3708e487ae0b1e2c3f2c497fb3b336fae4a1fd9c598ee41",
+      "bytes": 3789,
+      "mode": "0o600"
+    },
+    "tests/test_theory_and_preservation.py": {
+      "sha256": "6ba4f745633bd0d8255ecff8774c8a4afdb0f9fe4a3157020b41adcb9ff88ab8",
+      "bytes": 2106,
+      "mode": "0o600"
+    },
+    "tests/test_transcription_integration.py": {
+      "sha256": "372bb0225b05360f794153e76e7b08892335647c9bd3e0c83fd34e408d45ea91",
+      "bytes": 2624,
+      "mode": "0o600"
+    },
+    "tests/test_workflow.py": {
+      "sha256": "a19008d6ec6fa5e141c5307f5de4453b0319bf7cd5b19a55fc9d2788c3aeb553",
+      "bytes": 2781,
+      "mode": "0o600"
+    },
+    "tools/benchmark.py": {
+      "sha256": "c8163b8cf09ca454e2f8606d6fcf0302445ab93eb89e504452712458ad779373",
+      "bytes": 1652,
+      "mode": "0o600"
+    },
+    "tools/install_transcription.py": {
+      "sha256": "b44096bf44ae05fcee40cc7126914467b48c2ef93abe869240b20be364056948",
+      "bytes": 1148,
+      "mode": "0o600"
+    },
+    "tools/setup_cloud.sh": {
+      "sha256": "2ea27931402ae30a7e3c1fb9834d0a535fdca14e3accc40024e7070b7d09f345",
+      "bytes": 1036,
+      "mode": "0o700"
+    },
+    "tr1pp.spec": {
+      "sha256": "ca62e9c4006ffea4fdc1e62746882358b1cc15a75c9e91d7a357cfb9356bf658",
+      "bytes": 1145,
+      "mode": "0o600"
+    },
+    "tr1pp/__init__.py": {
+      "sha256": "043ac7e0eefe0e9950347de7c5d70a023a7bf04fbefd9f15525cadfe0e63c2e5",
+      "bytes": 106,
+      "mode": "0o600"
+    },
+    "tr1pp/__main__.py": {
+      "sha256": "79ee6f134c5c5193377cf9b189cbdcc3e2095e49ba9cec310114441c15a917c4",
+      "bytes": 47,
+      "mode": "0o600"
+    },
+    "tr1pp/audio.py": {
+      "sha256": "b6ab268b936861488abfd5840d1b3ca6b6cdef27feeef4b9e5ddd8c55f7d4bc8",
+      "bytes": 6574,
+      "mode": "0o600"
+    },
+    "tr1pp/cli.py": {
+      "sha256": "a8c60929aa8db8d360b76155a738b47d1de1de5e2fa1d2efb6f65743f19b1092",
+      "bytes": 3535,
+      "mode": "0o600"
+    },
+    "tr1pp/composition.py": {
+      "sha256": "1ac737e2dcdbc03561dce77a1e0b3b12053e5ce0fabdad073ff3fc4e53cad14c",
+      "bytes": 3694,
+      "mode": "0o600"
+    },
+    "tr1pp/editing.py": {
+      "sha256": "909d0b204c4d62879e03ded35235d4669733b18f8006e40baf883ddbe63761b8",
+      "bytes": 11621,
+      "mode": "0o600"
+    },
+    "tr1pp/engine.py": {
+      "sha256": "3a3799aaf1ff61d542c4ca176117304de1bb0dc4a7adfe487703971b782cee83",
+      "bytes": 17438,
+      "mode": "0o600"
+    },
+    "tr1pp/gui.py": {
+      "sha256": "cba6db3234637f1943bd3cc3b347c008b114dc76a6be279894499c9fd2902840",
+      "bytes": 18912,
+      "mode": "0o600"
+    },
+    "tr1pp/imports.py": {
+      "sha256": "a4d081d308eb69598aee7139af51ebe3d548d5f8d8b0dd71f107eb8306fc90f8",
+      "bytes": 3615,
+      "mode": "0o600"
+    },
+    "tr1pp/midi_repair.py": {
+      "sha256": "2d799ff87cb8e10b03c2b6bde0f39ed5846ebb1ad55fc414cdbe8b091c8316e6",
+      "bytes": 3253,
+      "mode": "0o600"
+    },
+    "tr1pp/music_theory.py": {
+      "sha256": "737265a52adfafcfba72d704a1c64bde331135ec8ee8a386acc169ef956fbadc",
+      "bytes": 2240,
+      "mode": "0o600"
+    },
+    "tr1pp/planning.py": {
+      "sha256": "0052d314c8598399d5edcbe5866d02e3417e455f7e6316df87f327cdda759f5d",
+      "bytes": 10440,
+      "mode": "0o600"
+    },
+    "tr1pp/preview.py": {
+      "sha256": "1fb74f40762cf0adb23e246290494bc0d7760d507c03a7fde759b406538544ba",
+      "bytes": 1307,
+      "mode": "0o600"
+    },
+    "tr1pp/project.py": {
+      "sha256": "09caeccb5b4dde465d006dc21f5f6153a743d55fa420173fd6ea6397dedae409",
+      "bytes": 10346,
+      "mode": "0o600"
+    },
+    "tr1pp/quality_metrics.py": {
+      "sha256": "f1f481650330283db1c4f5075e779b1c172670365fd11c214bbcea78e14e66ed",
+      "bytes": 1921,
+      "mode": "0o600"
+    },
+    "tr1pp/runtime.py": {
+      "sha256": "9b64828c44e61167820809a6d00ad3e3cc086fa110addf5c9b4a0863564e8748",
+      "bytes": 1276,
+      "mode": "0o600"
+    },
+    "tr1pp/studio.py": {
+      "sha256": "348f39d974cf9506807cf6b1fca843fbccb00cc340b9ce920047574806563e43",
+      "bytes": 43043,
+      "mode": "0o600"
+    },
+    "tr1pp/transcription.py": {
+      "sha256": "f4491c3faeaa36af2e524647df9ccca19f1f1f8b323527349c51773d252627ce",
+      "bytes": 8274,
+      "mode": "0o600"
+    },
+    "tr1pp/widgets.py": {
+      "sha256": "0bc24e68ce6f76391bb7c6e979bca09c381082d87a7fafca41342be2366638d7",
+      "bytes": 19347,
+      "mode": "0o600"
+    },
+    "tr1pp/workflow.py": {
+      "sha256": "d0e3537f00500909e9c0a00a63f4d32e1596492fddb8fd64e7d6b9fa6fe059db",
+      "bytes": 4519,
+      "mode": "0o600"
+    }
+  }
+}

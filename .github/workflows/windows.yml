@@ -1,0 +1,44 @@
+name: Windows development validation
+on:
+  workflow_dispatch:
+  push:
+    paths: ['tr1pp/**', 'tests/**', 'tools/**', 'requirements*.txt', 'pyproject.toml', 'tr1pp.spec', '.github/workflows/windows.yml']
+  pull_request:
+    paths: ['tr1pp/**', 'tests/**', 'tools/**', 'requirements*.txt', 'pyproject.toml', 'tr1pp.spec', '.github/workflows/windows.yml']
+jobs:
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 35
+    env:
+      QT_QPA_PLATFORM: offscreen
+      TR1PP_TEST_MODEL: '1'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - name: Install application and model
+        shell: pwsh
+        run: |
+          python -m pip install -r requirements.txt pytest 'pyinstaller>=6.10,<7'
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python -m pip install --no-deps -e .
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          python tools/install_transcription.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Install FFmpeg
+        shell: pwsh
+        run: choco install ffmpeg -y --no-progress
+      - name: Regression, GUI and actual model tests
+        shell: pwsh
+        run: python -m pytest -q --junitxml=windows-test-results.xml
+      - name: Build native executable
+        shell: pwsh
+        run: python -m PyInstaller --noconfirm --clean tr1pp.spec
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows-development-build
+          path: |
+            dist/TR1PP Mashup Studio/
+            windows-test-results.xml

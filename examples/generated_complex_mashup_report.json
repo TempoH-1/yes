@@ -1,0 +1,138 @@
+{
+  "sources": [
+    {
+      "midi_repairs": [],
+      "duration": 126.79,
+      "notes": 3201,
+      "bpm_estimate": 251.81,
+      "key_estimate": "E minor",
+      "range": [
+        28,
+        91
+      ],
+      "peak_note_count_per_4sec": 137,
+      "melody_candidates": 900,
+      "instruments": [
+        {
+          "name": "Circus Lead (right hand)",
+          "notes": 727
+        },
+        {
+          "name": "March Bass (left hand)",
+          "notes": 707
+        },
+        {
+          "name": "Rush-inspired figurations (right hand)",
+          "notes": 1767
+        }
+      ],
+      "confidence": "Heuristic, not confirmed transcription",
+      "limitations": "Key/melody estimates are pitch-statistical; tempo changes and exact hands are not reliably inferred."
+    },
+    {
+      "midi_repairs": [],
+      "duration": 157.6,
+      "notes": 2895,
+      "bpm_estimate": 158.0,
+      "key_estimate": "E minor",
+      "range": [
+        40,
+        96
+      ],
+      "peak_note_count_per_4sec": 119,
+      "melody_candidates": 1188,
+      "instruments": [
+        {
+          "name": "Right hand - Rush E then Gladiators",
+          "notes": 1564
+        },
+        {
+          "name": "Left hand - accompaniment",
+          "notes": 933
+        },
+        {
+          "name": "Transition ornamentation",
+          "notes": 398
+        }
+      ],
+      "confidence": "Heuristic, not confirmed transcription",
+      "limitations": "Key/melody estimates are pitch-statistical; tempo changes and exact hands are not reliably inferred."
+    }
+  ],
+  "transitions": [
+    {
+      "after_song": 1,
+      "start": 126.79,
+      "end": 130.304,
+      "first_root": "E",
+      "next_root": "E",
+      "candidate_evaluation": {
+        "candidate": 0,
+        "tonal_anchor_notes": 4,
+        "prearrival_anchor_notes": 27,
+        "bridge_density_nps": 17.64,
+        "heuristic_rating": 12.05,
+        "compared": [
+          {
+            "candidate": 0,
+            "tonal_anchor_notes": 4,
+            "prearrival_anchor_notes": 27,
+            "bridge_density_nps": 17.64,
+            "heuristic_rating": 12.05
+          },
+          {
+            "candidate": 1,
+            "tonal_anchor_notes": 3,
+            "prearrival_anchor_notes": 29,
+            "bridge_density_nps": 17.36,
+            "heuristic_rating": 10.35
+          },
+          {
+            "candidate": 2,
+            "tonal_anchor_notes": 3,
+            "prearrival_anchor_notes": 30,
+            "bridge_density_nps": 16.51,
+            "heuristic_rating": 10.5
+          }
+        ]
+      }
+    }
+  ],
+  "settings": {
+    "mode": "Seamless Transition",
+    "bridge_bars": 3,
+    "crossfade_bars": 4,
+    "target_bpm": 0,
+    "lead_in_bars": 4,
+    "motif_strength": 0.55,
+    "humanize_ms": 0,
+    "difficulty": 65,
+    "max_notes_per_second": 24,
+    "strict_two_hands": false,
+    "seed": 17,
+    "original_preservation": 1.0
+  },
+  "quality": {
+    "note_count": 6158,
+    "duration_sec": 287.9,
+    "maximum_notes_in_one_second": 39,
+    "invalid_note_lengths": 0,
+    "notes_reduced_by_playability_filter": 0,
+    "bridge_sec": [
+      126.79,
+      130.3
+    ],
+    "flags": [
+      "Very high peak density; review piano playability"
+    ],
+    "caution": "Automated checks cannot judge musical beauty, melodic authenticity, or pianist feasibility."
+  },
+  "implementation": "Source-derived boundary motif bridge with three scored candidates and sequential arrangement. Original note timings retained except edge clipping and optional humanization.",
+  "limits": [
+    "No automatic audio transcription",
+    "No generative composition model",
+    "Heuristic piano-hand division; not a guarantee of two-hand playability",
+    "No local tempo ramps yet; no reliable style synthesis beyond small bass/ornament differences",
+    "MIDI velocities and pedal are approximate"
+  ]
+}

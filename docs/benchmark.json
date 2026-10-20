@@ -1,0 +1,13 @@
+{
+  "arrange_seconds": 1.8565,
+  "editor_load_seconds": 0.0286,
+  "move_group_seconds": 0.0283,
+  "save_project_seconds": 0.189,
+  "load_project_seconds": 0.0697,
+  "synthetic_render_8khz_seconds": 1.0177,
+  "note_count": 6133,
+  "duration_seconds": 286.723,
+  "project_bytes": 84633,
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "python": "3.12.14"
+}

@@ -1,0 +1,128 @@
+{
+  "sources": [
+    {
+      "midi_repairs": [],
+      "duration": 13.73,
+      "notes": 96,
+      "bpm_estimate": 279.07,
+      "key_estimate": "E major",
+      "range": [
+        40,
+        76
+      ],
+      "peak_note_count_per_4sec": 24,
+      "melody_candidates": 48,
+      "instruments": [
+        {
+          "name": "Synthetic melody",
+          "notes": 64
+        },
+        {
+          "name": "Synthetic bass",
+          "notes": 32
+        }
+      ],
+      "confidence": "Heuristic, not confirmed transcription",
+      "limitations": "Key/melody estimates are pitch-statistical; tempo changes and exact hands are not reliably inferred."
+    },
+    {
+      "midi_repairs": [],
+      "duration": 13.73,
+      "notes": 96,
+      "bpm_estimate": 279.07,
+      "key_estimate": "B minor",
+      "range": [
+        43,
+        76
+      ],
+      "peak_note_count_per_4sec": 24,
+      "melody_candidates": 56,
+      "instruments": [
+        {
+          "name": "Synthetic melody",
+          "notes": 64
+        },
+        {
+          "name": "Synthetic bass",
+          "notes": 32
+        }
+      ],
+      "confidence": "Heuristic, not confirmed transcription",
+      "limitations": "Key/melody estimates are pitch-statistical; tempo changes and exact hands are not reliably inferred."
+    }
+  ],
+  "transitions": [
+    {
+      "after_song": 1,
+      "start": 13.73,
+      "end": 19.73,
+      "first_root": "E",
+      "next_root": "B",
+      "candidate_evaluation": {
+        "candidate": 2,
+        "tonal_anchor_notes": 2,
+        "prearrival_anchor_notes": 15,
+        "bridge_density_nps": 9.5,
+        "heuristic_rating": 6.05,
+        "compared": [
+          {
+            "candidate": 0,
+            "tonal_anchor_notes": 2,
+            "prearrival_anchor_notes": 10,
+            "bridge_density_nps": 9.83,
+            "heuristic_rating": 5.3
+          },
+          {
+            "candidate": 1,
+            "tonal_anchor_notes": 2,
+            "prearrival_anchor_notes": 13,
+            "bridge_density_nps": 9.83,
+            "heuristic_rating": 5.75
+          },
+          {
+            "candidate": 2,
+            "tonal_anchor_notes": 2,
+            "prearrival_anchor_notes": 15,
+            "bridge_density_nps": 9.5,
+            "heuristic_rating": 6.05
+          }
+        ]
+      }
+    }
+  ],
+  "settings": {
+    "mode": "Seamless Transition",
+    "bridge_bars": 6,
+    "crossfade_bars": 4,
+    "target_bpm": 0,
+    "lead_in_bars": 4,
+    "motif_strength": 0.55,
+    "humanize_ms": 0,
+    "difficulty": 65,
+    "max_notes_per_second": 24,
+    "strict_two_hands": false,
+    "seed": 17,
+    "original_preservation": 1.0
+  },
+  "quality": {
+    "note_count": 249,
+    "duration_sec": 33.46,
+    "maximum_notes_in_one_second": 13,
+    "invalid_note_lengths": 0,
+    "notes_reduced_by_playability_filter": 0,
+    "bridge_sec": [
+      13.73,
+      19.73
+    ],
+    "flags": [],
+    "caution": "Automated checks cannot judge musical beauty, melodic authenticity, or pianist feasibility."
+  },
+  "implementation": "Source-derived boundary motif bridge with three scored candidates and sequential arrangement. Original note timings retained except edge clipping and optional humanization.",
+  "limits": [
+    "No automatic audio transcription",
+    "No generative composition model",
+    "Heuristic piano-hand division; not a guarantee of two-hand playability",
+    "No local tempo ramps yet; no reliable style synthesis beyond small bass/ornament differences",
+    "MIDI velocities and pedal are approximate"
+  ]
+}

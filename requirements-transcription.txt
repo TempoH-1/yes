@@ -1,0 +1,16 @@
+# Basic Pitch 0.4.0 supports ONNX inference, but its package metadata mandates an
+# older TensorFlow build on Python >=3.11. Install the model package separately
+# with --no-deps using tools/install_transcription.py; all runtime dependencies
+# for the ONNX path are explicitly installed here. TensorFlow is not used.
+onnxruntime>=1.17,<2
+mir-eval>=0.7,<0.9
+resampy==0.4.2
+scikit-learn>=1.4,<2
+scipy>=1.11,<2
+typing-extensions>=4.8
+librosa>=0.10.2,<0.12
+pretty_midi>=0.2.10,<0.3
+numpy>=1.26,<3
+
+# resampy 0.4.2 imports pkg_resources, removed by newer setuptools.
+setuptools>=69,<81

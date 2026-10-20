@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.tr1pp-cache/
+build/
+dist/
+*.egg-info/
+*.tr1pp
+*.log

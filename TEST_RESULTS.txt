@@ -1,0 +1,59 @@
+TR1PP Mashup Studio 2.0 — development checkpoint verification
+
+Platform: Linux x86_64, Python 3.12.14, PySide6 6.8.3.
+All supplied test sources and fixtures remain byte-for-byte identical to the input archive.
+
+Original baseline: 13 passed.
+Idempotent setup script run: 57 then-current tests passed.
+Fresh virtual environment via tools/setup_cloud.sh: 59 then-current tests passed,
+including the actual pretrained model and native SoundFont checks.
+After final local audio/video decode checks were added:
+
+Command (cwd /workspace/yes):
+QT_QPA_PLATFORM=offscreen TR1PP_TEST_MODEL=1 XDG_CACHE_HOME=/workspace/tr1pp-cache /workspace/tr1pp-venv/bin/python -m pytest -q
+
+Final outcome: 61 passed, 0 failed, 0 skipped. Both actual model tests executed.
+Eight upstream deprecation warnings are retained below; no assertions disabled.
+
+Separate observations:
+- Real FluidSynth/SF2 stereo FLAC render produced nonzero audio.
+- MusicXML export/reimport preserved source pitch content.
+- CLI build -> portable project -> MIDI -> SoundFont WAV render completed.
+- Benchmark results are in docs/benchmark.json.
+- YouTube metadata: blocked by egress proxy HTTP 403; no online success claimed.
+- Qt has no cloud audio device; real speaker output was not tested.
+- Windows build, native audio and installer were not run.
+- pip check reports only Basic Pitch's unused TensorFlow metadata requirement;
+  the explicitly installed ONNX runtime/model are exercised successfully.
+
+Raw final pytest output:
+........................Input #0, wav, from '/tmp/pytest-of-agent/pytest-10/test_integrated_arrange_edit_m0/data/preview-6.wav':
+  Duration: 00:00:29.95, bitrate: 1058 kb/s
+  Stream #0:0: Audio: pcm_s24le ([1][0][0][0] / 0x0001), 22050 Hz, 2 channels, s32 (24 bit), 1058 kb/s
+.....................................            [100%]
+=============================== warnings summary ===============================
+tests/test_gui_interaction.py::test_integrated_arrange_edit_mixer_save_reopen_and_background_job
+tests/test_gui_interaction.py::test_integrated_arrange_edit_mixer_save_reopen_and_background_job
+tests/test_notation_and_soundfont.py::test_real_soundfont_render_when_native_assets_present
+tests/test_notation_and_soundfont.py::test_real_soundfont_render_when_native_assets_present
+  /workspace/yes/tr1pp/audio.py:72: DeprecationWarning: The parameter 'sf2_path' is deprecated, please use 'synthesizer' instead.
+    try: mono = ins.fluidsynth(fs=rate, sf2_path=str(soundfont))
+
+tests/test_transcription_integration.py::test_actual_pretrained_model_audio_to_editable_portable_midi
+  /workspace/tr1pp-venv/lib/python3.12/site-packages/resampy/filters.py:50: UserWarning: pkg_resources is deprecated as an API. See https://setuptools.pypa.io/en/latest/pkg_resources.html. The pkg_resources package is slated for removal as early as 2025-11-30. Refrain from using this package or pin to Setuptools<81.
+    import pkg_resources
+
+tests/test_transcription_integration.py::test_actual_pretrained_model_audio_to_editable_portable_midi
+  /workspace/tr1pp-venv/lib/python3.12/site-packages/audioread/rawread.py:16: DeprecationWarning: 'aifc' is deprecated and slated for removal in Python 3.13
+    import aifc
+
+tests/test_transcription_integration.py::test_actual_pretrained_model_audio_to_editable_portable_midi
+  /workspace/tr1pp-venv/lib/python3.12/site-packages/audioread/rawread.py:17: DeprecationWarning: 'audioop' is deprecated and slated for removal in Python 3.13
+    import audioop
+
+tests/test_transcription_integration.py::test_actual_pretrained_model_audio_to_editable_portable_midi
+  /workspace/tr1pp-venv/lib/python3.12/site-packages/audioread/rawread.py:19: DeprecationWarning: 'sunau' is deprecated and slated for removal in Python 3.13
+    import sunau
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+61 passed, 8 warnings in 21.91s
